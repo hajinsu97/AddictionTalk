@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">My Application</string>
+    // Home Page
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="currentStreakDaysDisplay">%d days</string>
+    // Log Page
+    <string name="title_logs">Logs</string>
+    // Profile Page
+    <string name="title_profile">Profile</string>
+
 </resources>
