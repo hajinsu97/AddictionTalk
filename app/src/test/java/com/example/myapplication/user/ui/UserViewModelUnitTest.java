@@ -1,17 +1,16 @@
-package com.example.myapplication;
+package com.example.myapplication.user.ui;
 
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 /**
- * Example local unit test, which will execute on the development machine (host).
+ * Unit tests for {@link com.example.myapplication.ui.user.UserViewModel}
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class UnitTest {
+public class UserViewModelUnitTest {
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
     }
 }
