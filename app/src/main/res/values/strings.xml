@@ -3,9 +3,12 @@
     // Home Page
     <string name="title_home">Home</string>
     <string name="currentStreakDaysDisplay">%d days</string>
+    <string name="incrementStreakButtonContentDescription">Increment days not binged by 1</string>
+    <string name="resetStreakButtonContentDescription">Reset days not binged back to 0</string>
     // Log Page
     <string name="title_logs">Logs</string>
     // Profile Page
     <string name="title_profile">Profile</string>
+
 
 </resources>
