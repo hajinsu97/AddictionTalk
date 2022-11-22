@@ -1,13 +1,14 @@
 package com.example.myapplication.model.user;
 
 public class User {
+
     private Integer currentStreakDays = 0;
 
     public Integer getCurrentStreakDays() {
         return currentStreakDays;
     }
 
-    public void incrementCurrentStreakDays(){
+    public void incrementCurrentStreakDays() {
         currentStreakDays++;
     }
 
