@@ -1,12 +1,10 @@
 package com.example.myapplication.model.user;
 
-import org.junit.Test;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-import com.example.myapplication.model.user.User;
+import org.junit.Test;
 
 /**
  * Unit tests for {@link User}

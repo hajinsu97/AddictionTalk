@@ -6,12 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
-
 import com.example.myapplication.R;
 import com.example.myapplication.databinding.FragmentHomeBinding;
 import com.example.myapplication.model.user.User;
@@ -23,10 +21,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private MutableLiveData<Integer> currentStreakDaysLiveData;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+        ViewGroup container, Bundle savedInstanceState) {
         Resources res = getResources();
         HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+            new ViewModelProvider(this).get(HomeViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
@@ -37,23 +35,27 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         currentStreakDaysLiveData = new MutableLiveData<>();
         currentStreakDaysLiveData.setValue(user.getCurrentStreakDays());
         currentStreakDaysLiveData.observe(getViewLifecycleOwner(),
-                currentStreakDays -> binding.currentStreakDays.setText(String.format(res.getString(R.string.currentStreakDaysDisplay), currentStreakDays)));
+            currentStreakDays -> binding.currentStreakDays.setText(
+                String.format(res.getString(R.string.currentStreakDaysDisplay),
+                    currentStreakDays)));
 
         // Initialize Buttons
-        ImageButton incrementStreakButton = (ImageButton) root.findViewById(R.id.incrementStreakButton);
+        ImageButton incrementStreakButton = root.findViewById(
+            R.id.incrementStreakButton);
         incrementStreakButton.setOnClickListener(this);
-        ImageButton resetStreakButton = (ImageButton) root.findViewById(R.id.resetStreakButton);
+        ImageButton resetStreakButton = root.findViewById(R.id.resetStreakButton);
         resetStreakButton.setOnClickListener(this);
 
         return root;
     }
 
     @Override
-    public void onClick(View view){
-        if (view.getId() == R.id.incrementStreakButton)
+    public void onClick(View view) {
+        if (view.getId() == R.id.incrementStreakButton) {
             user.incrementCurrentStreakDays();
-        else if (view.getId() == R.id.resetStreakButton)
+        } else if (view.getId() == R.id.resetStreakButton) {
             user.resetCurrentStreakDays();
+        }
         currentStreakDaysLiveData.setValue(user.getCurrentStreakDays());
     }
 
