@@ -1,4 +1,4 @@
-package com.example.myapplication.model.user;
+package com.addictiontalk.model.user;
 
 public class User {
 

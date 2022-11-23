@@ -1,4 +1,4 @@
-package com.example.myapplication.model.user;
+package com.addictiontalk.model.user;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;

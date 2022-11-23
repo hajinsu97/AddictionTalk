@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.home;
+package com.addictiontalk.ui.home;
 
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -10,9 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
-import com.example.myapplication.R;
-import com.example.myapplication.databinding.FragmentHomeBinding;
-import com.example.myapplication.model.user.User;
+import com.addictiontalk.R;
+import com.addictiontalk.databinding.FragmentHomeBinding;
+import com.addictiontalk.model.user.User;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
