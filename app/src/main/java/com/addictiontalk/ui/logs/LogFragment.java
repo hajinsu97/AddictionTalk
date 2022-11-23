@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.profile;
+package com.addictiontalk.ui.logs;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,22 +8,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import com.example.myapplication.databinding.FragmentProfileBinding;
+import com.addictiontalk.databinding.FragmentLogsBinding;
 
-public class ProfileFragment extends Fragment {
+public class LogFragment extends Fragment {
 
-    private FragmentProfileBinding binding;
+    private FragmentLogsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
         ViewGroup container, Bundle savedInstanceState) {
-        ProfileViewModel notificationsViewModel =
-            new ViewModelProvider(this).get(ProfileViewModel.class);
+        LogViewModel dashboardViewModel =
+            new ViewModelProvider(this).get(LogViewModel.class);
 
-        binding = FragmentProfileBinding.inflate(inflater, container, false);
+        binding = FragmentLogsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textProfile;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textLog;
+        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

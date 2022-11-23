@@ -1,9 +1,10 @@
-package com.example.myapplication.model.user;
+package com.addictiontalk.model.user;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import com.addictiontalk.model.user.User;
 import org.junit.Test;
 
 /**

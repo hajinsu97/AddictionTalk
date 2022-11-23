@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">AddictionTalk</string>
     // Home Page
     <string name="title_home">Home</string>
     <string name="currentStreakDaysDisplay">%d days</string>

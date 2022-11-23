@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.addictiontalk;
 
 import static org.junit.Assert.assertEquals;
 
