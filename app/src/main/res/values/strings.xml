@@ -7,8 +7,11 @@
     <string name="resetStreakButtonContentDescription">Reset days not binged back to 0</string>
     // Log Page
     <string name="title_logs">Logs</string>
+    <string name="editTextDateHint">Date</string>
+    <string name="editTextLocationHint">Location</string>
+    <string name="editTextCravingHint">Food your craving</string>
+    <string name="editTextCostHint">Estimated cost</string>
     // Profile Page
     <string name="title_profile">Profile</string>
-
 
 </resources>

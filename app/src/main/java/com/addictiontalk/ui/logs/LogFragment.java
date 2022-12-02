@@ -4,26 +4,35 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import com.addictiontalk.databinding.FragmentLogsBinding;
+import com.addictiontalk.databinding.FragmentLogBinding;
+import com.addictiontalk.model.user.CravingLog;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class LogFragment extends Fragment {
 
-    private FragmentLogsBinding binding;
+    private FragmentLogBinding binding;
+    private final CravingLog cravingLog = new CravingLog();
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-        ViewGroup container, Bundle savedInstanceState) {
-        LogViewModel dashboardViewModel =
-            new ViewModelProvider(this).get(LogViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
+        Bundle savedInstanceState) {
+        LogViewModel logViewModel = new ViewModelProvider(this).get(LogViewModel.class);
 
-        binding = FragmentLogsBinding.inflate(inflater, container, false);
+        binding = FragmentLogBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textLog;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        // Setup TextWatchers for each EditText in the log
+        ArrayList<EditText> editTextList = new ArrayList<>(
+            Arrays.asList(binding.editTextDate, binding.editTextLocation, binding.editTextCraving,
+                binding.editTextCost));
+        for (EditText editText : editTextList) {
+            editText.addTextChangedListener(new CravingLogTextWatcher(cravingLog, editText));
+        }
+
         return root;
     }
 

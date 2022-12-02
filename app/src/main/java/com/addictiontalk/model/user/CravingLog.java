@@ -1,12 +1,9 @@
 package com.addictiontalk.model.user;
 
-import android.location.Location;
-import java.util.Date;
-
 public class CravingLog {
 
-    private Date date;
-    private Location location;
+    private String date;
+    private String location;
     private String activity;
     private String craving;
     private Double cost;
@@ -17,31 +14,19 @@ public class CravingLog {
     private Integer stressLevel;
     private String thoughts;
 
-    public CravingLog(Date date, Location location, Integer hungerLevel, Integer stressLevel,
-        String activity, String thoughts, String craving, Double cost) {
-        this.date = date;
-        this.location = location;
-        this.hungerLevel = hungerLevel;
-        this.stressLevel = stressLevel;
-        this.activity = activity;
-        this.thoughts = thoughts;
-        this.craving = craving;
-        this.cost = cost;
-    }
-
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Location getLocation() {
+    public String getLocation() {
         return location;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
